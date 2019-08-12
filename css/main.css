@@ -1,0 +1,95 @@
+*{margin:0;padding: 0;}		
+/*默认样式，主要是position:fixed实现屏幕绝对定位*/
+#gotoTop{display:none;position:fixed;top:90%;left:85%;cursor:pointer;font-size: 30px;text-align:center;background-color: #ccc;width: 44px;height: 44px;}
+/*用CSS表达式(expression)来实现ie6下position:fixed效果*/
+#gotoTop{_position:absolute;_top:expression(documentElement.scrollTop + documentElement.clientHeight * 3/4 + "px")}
+/*鼠标进入的反馈效果*/
+#gotoTop.hover{color: #fff;text-decoration:none;}
+.facebook,.weibo{
+		display: block;
+		float: left;
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+		border:1px solid #3a5999;
+		border-radius: 50%;
+		box-shadow: 0 0 0 0px #ccc;
+		background: url(../img/ff.png) no-repeat center center;
+		transition:background 0.5s ease-in 0s,box-shadow 0.5s ease-in 0s;
+		box-sizing:border-box;
+	}
+.weibo{background: url(../img/ww.png);border:1px solid #ccc;}	
+.facebook:hover{
+		background: url(../img/f.png) no-repeat center center;
+		box-shadow: 0 0 1px 1px #ccc;
+	}
+.weibo:hover{
+		background: url(../img/w.png) no-repeat center center;
+		box-shadow: 0 0 1px 1px #ccc;
+	}	
+.contactinfo{float: left;margin-left: 10px;}
+.navbar-default{background-color: #fff;}
+.header-top{display: none;}
+#footer{font-size: 10px;margin-top: 20px;padding-top:30px;background:rgba(216,216,216,0.26) none repeat center top;}
+p{font-size: 10px;}
+h1{font-size: 22px;}
+
+#dituContent{border:#ccc solid 1px;height: 300px;}
+
+/*解决地图api中marker文字的样式问题*/
+.pop .center{width: 252px !important;}
+.pop .bottom{height:25px !important;}
+.BMap_Marker{width: 125px !important;}
+
+/*解决方案*/
+.caption{padding:20px;margin-top: -20px;height: auto;background:rgba(216,216,216,0.26) none repeat center top;}
+.infocase .thunmbnail{margin-bottom: 30px;display: block;}
+.infocase .mask{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(24,24,24,0.3);
+		opacity: 0;
+
+	}
+.infocase .mask:hover{
+		opacity: 1;
+	}
+
+
+	/* 小屏幕（平板，大于等于 768px） */
+@media screen and (min-width: 768px) {
+.header-top{display: block;}
+.jumbotron{margin-top: 100px;}
+.navbar-collapse{margin-top: 42px;}
+#footer{font-size: 14px;}
+p{font-size: 12px;}
+h1{font-size: 26px;}
+#gotoTop{left:90%;}
+}
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media screen and (min-width: 992px) {
+.header-top{display: block;}
+.jumbotron{margin-top: 100px;}
+.navbar-collapse{margin-top: 50px;}
+#footer{font-size: 14px;}
+p{font-size: 14px;}
+h1{font-size: 30px;}
+.img-logo{margin-top: -5px;}
+#gotoTop{left:95%;}
+#dituContent{height: 400px;}
+}
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media screen and (min-width: 1200px) {
+.header-top{display: block;}
+.jumbotron{margin-top: 100px;}
+.navbar-collapse{margin-top: 50px;}
+#footer{font-size: 14px;}
+p{font-size: 14px;}
+h1{font-size: 30px;}
+.img-logo{margin-top: -5px;}
+#gotoTop{left:95%;}
+#dituContent{height: 400px;}
+}

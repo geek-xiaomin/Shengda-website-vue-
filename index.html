@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>广东胜大科技有限公司</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/jquery.nivo.slider.pack.js"></script>
+	<script src="js/init.js"></script>
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+	<script src="https://unpkg.com/vue-router@3.0.7/dist/vue-router.js"></script>
+	<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div id="sd">
+	<router-view></router-view>
+
+<script type="text/x-template" id="navbar">
+	<div><!--导航-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">		
+			<div class="header-top text-muted">
+				<a href="#" class="facebook"></a>
+				<a href="#" class="weibo"></a>
+				<div class="contactinfo">
+					<span class="glyphicon glyphicon-phone-alt"></span> 400-888-8888&nbsp; 
+					<span class="glyphicon glyphicon-envelope"></span> 251142691@qq.com&nbsp;
+					<span class="glyphicon glyphicon-map-marker"></span> 广东汕头 	
+				</div>			
+				<div class="pull-right">
+					<a href="#"><img src="img/cn.jpg" alt=""><u>简体中文</u></a>&nbsp;
+					<a href="#"><img src="img/en.jpg" alt=""><u>English</u></a>
+				</div>
+			</div>		
+		<div class="navbar-header">			
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>		
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<a href="index.html" class="navbar-brand" ><img src="img/logo.jpg" alt="" class="img-logo"></a>
+			<ul class="nav navbar-nav">
+				<li class="active"><router-link to="/">首页</router-link></li>
+				<li><router-link to="/products">产品中心</router-link></li>
+				<li><router-link to="/cases">解决方案</router-link></li>
+				<li><router-link to="/news">新闻中心</router-link></li>
+				<li><router-link to="/about">关于胜大</router-link></li>
+				<li><router-link to="/contact">联系我们</router-link></li>
+			</ul>
+		</div>
+	</div>
+		</nav>
+	</div>
+</script>	
+
+<!--轮播图-->
+<script type="text/x-template" id="index">
+	<div>
+		<div id="myCarousel" class="carousel slide">
+			<div id="slider" class="nivoSlider carousel-inner">
+				<div style="background:#223240;"><a name="#"><img src="img/banner1.jpg" alt="1"></a></div>
+				<div class="item" style="background:#F5E4DC;"><a href="#"><img src="img/banner2.jpg" alt="2"  title="#htmlcaption"></a></div>
+			</div>
+		<a href="#myCarousel" data-slide="prev" class="carousel-control left"><!--&lsaquo;--><span class="glyphicon glyphicon-chevron-left"></span></a>
+		<a href="#myCarousel" data-slide="next" class="carousel-control right"><!--&rsaquo;--><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+		<!--首页内容-->
+		<div class="tab1">
+		<div class="container text-center">
+		<h1 class="tab-h1"><strong>智能工业</strong></h1>
+		<h2 class="tab-h2">欢迎来到胜大，智能制造整体解决方案运营商。</h2>
+		<a class="btn btn-default" href="about.html" role="button">关于胜大</a>
+		<div class="row">
+			<div class="col-md-4 col">
+				<img src="img/banner1.jpg" alt="" class="img-responsive">
+			</div>
+			<div class="col-md-4 col">
+				<img src="img/banner2.jpg" alt="" class="img-responsive">
+			</div>
+			<div class="col-md-4 col">
+				<img src="img/banner1.jpg" alt="" class="img-responsive">
+			</div>		
+		</div>
+		</div>
+		</div>
+		<!--新闻资讯-->
+	<div class="tab2">
+	<div class="container">
+		<h2 class="tab-h2">新闻资讯</h2>
+		<div class="row">
+			<div class="col-md-4 col">
+				<img src="img/banner2.jpg" alt="" class="img-responsive">
+			</div>
+			<div class="col-md-4 col">
+				<img src="img/banner1.jpg" alt="" class="img-responsive">
+			</div>
+			<div class="col-md-4 col">
+				<img src="img/banner2.jpg" alt="" class="img-responsive">
+			</div>		
+		</div>
+	</div>
+	</div>
+
+		<!--咨询-->
+	<div class="tab3">
+	<div class="container text-center">
+		<h1 class="tab-h1"><strong>智造时代，智惠世界</strong></h1>
+		<h2 class="tab-h2">胜大诚邀合作伙伴</h2>
+		<a class="btn btn-default" href="contact.html" role="button">立即咨询</a>
+		<img src="img/banner2.jpg" alt="" class="img-responsive">
+	</div>
+	</div>
+
+		<!--订阅-->
+		<div class="tab4">
+			<div class="container">		
+				<h2 class="tab-h2">欢迎订阅 胜大 资讯</h2>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="电子邮件*">
+				<input class="btn btn-default" type="submit" value="订阅">
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/x-template" id="products">
+	<div>
+		<div class="jumbotron">
+			<div class="container">
+				<hgroup>
+					<h1>产品中心</h1>
+					<h4 class="text-muted"><a href="index.html"> 首页 </a>/ 产品中心</h4>
+				</hgroup>
+			</div>
+		</div>
+		<!--首页内容-->
+		<div class="tab1">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-md-10 col">
+						<a href="" class="active">查看全部</a>
+						<a href="">生产线设备系列</a>
+						<a href="">热熔胶设备系列</a>
+						<a href="">针车设备系列</a>
+						<a href="">裁断设备系列</a>
+						<a href="">成型配套设备系列</a>
+						<a href="">定型设备系列</a>
+						<a href="">打粗设备系列</a>
+						<a href="">配套辅助设备系列</a>
+						<a href="">产品手册</a>
+					</div>
+					<div class="col-md-2 col">
+						<span class="fillter-by">
+							<a class="glyphicon glyphicon-calendar"</a>
+							<a></a>
+							<a>A</a></span>
+						<span class="fillter-sorting">
+							<a class="glyphicon glyphicon-sort-by-attributes"></a>
+							<a></a>
+							<a class="glyphicon glyphicon-sort-by-attributes-alt"></a>
+						</span>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<!--新闻资讯-->
+		<div class="tab2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col">
+						<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#1</a></span>
+						<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#4</a></span>
+						<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#7</a></span>
+					</div>
+					<div class="col-md-4 col">
+						<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#2</a></span>
+						<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#5</a></span>
+						<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#8</a></span>
+					</div>
+					<div class="col-md-4 col">
+						<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#3</a></span>
+						<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#6</a></span>
+						<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#9</a></span>
+					</div>	
+				</div>
+			</div>
+		</div>						
+	</div>
+</script>
+<script type="text/x-template" id="cases">
+	<div>
+		<!--解决方案-->
+		<div class="jumbotron">
+	<div class="container">
+		<hgroup>
+			<h1>解决方案</h1>
+			<h4 class="text-muted"><a href="index.html"> 首页 </a>/ 解决方案</h4>
+		</hgroup>
+	</div>
+		</div>
+
+		<!--内容-->
+		<div class="infocase">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col">
+				<span class="thunmbnail">
+					<div>
+						<img src="img/banner2.jpg" alt="" class="img-responsive">
+						<div class="mask"></div>
+					</div>				
+					<div class="caption">
+       					<h3><strong>各领域智能成型解决方案</strong></h3>
+        				<p>方案优势：</p>
+						<p>1、生产管理程序化：模块化应用，完美嵌入式生产</p>
+						<p>2、降低人工成本：由原先的148人降低至只需38人</p>
+						<p>3、提升产品标准：机器人代工，摆脱繁琐程序；喷涂均匀精准、耗材损耗小；节能环保、不直接接触胶水</p>
+						<p>4、产品个性化定制</p>
+						<p>5、成品合格率上升5%，生产效率提高50%，耗材损耗减低50%</p>
+        				<p><a class="btn">阅读更多</a></p>
+      				</div>
+      			</span>
+				<span class="thunmbnail">
+					<div>
+						<img src="img/banner2.jpg" alt="" class="img-responsive">
+						<div class="mask"></div>
+					</div>
+					<div class="caption">
+       					<h3><strong>个性化定制+智能化工厂解决方案</strong></h3>
+        				<p>方案优势：</p>
+						<p>从商品订单转化成生产指令单一步跨越，从生产指令单再到自动识别客户物流信息又是一步跨越，零库存、下线即快递的模式应运而生</p>
+						<p>1、APP定制：消费者将可以直接通过APP，直接在网络上完成鞋子的定制;</p>
+						<p>2、智能工厂：智能工厂通过物联网将每台设备连接到生产网络中；</p>
+						<p>3、智能物流：条形码、快递单、包装盒，一体打包，一步到位。快递发货到用户手中，只需要7-10天；</p>
+						<p>4、云平台：未来的云平台，不仅是制鞋这一环节，它将会是集合上下游产业链的网络平台；</p>
+        				<p><a class="btn">阅读更多</a></p>
+      				</div>
+      			</span>
+			</div>
+			<div class="col-md-6 col">
+				<span class="thunmbnail">
+					<div>
+						<img src="img/banner2.jpg" alt="" class="img-responsive">
+						<div class="mask"></div>
+					</div>
+					<div class="caption">
+       					<h3><strong>智能机器人PUR成型小线</strong></h3>
+        				<p>方案优势：</p>
+						<p>1.质量稳定：机器人作业，喷胶精准，高效稳定，环保节能；</p>
+						<p>2.效率提升：采用视觉识别系统与机械手臂喷涂同步进行，作业效率高；</p>
+						<p>3.自动识别：非接触可自动识别鞋码鞋底，读取速度快且精准，可靠性高；</p>
+						<p>4.节省工序：省去鞋面喷胶工序，省工省料同时节省时间成本；</p>
+						<p>5.运用范围广：广泛用于多孔材料、塑料、金属等材料喷胶；</p>
+						<p>6.优质性能：耐热耐寒耐水蒸气，耐化学腐蚀性和耐老化性；环保无污染。</p>
+        				<p><a class="btn">阅读更多</a></p>
+      				</div>
+      			</span>
+				<span class="thunmbnail">
+					<div>
+						<img src="img/banner2.jpg" alt="" class="img-responsive">
+						<div class="mask"></div>
+					</div>
+					<div class="caption">
+       					<h3><strong>AGV智能仓储系统</strong></h3>
+        				<p>方案优势：</p>
+						<p>智能仓储系统是智能制造工业4.0快速发展的一个重要组成部分</p>
+						<p>1.实现数字化管理，出／入库、物料库存量等仓库日常管理业务可做到实时查询与监控，减少对操作人员经验的依赖性；</p>
+						<p>2.转变为以信息系统来规范作业流程，以信息系统提供操作指令，节约用地、减轻劳动强度、避免货物损坏或遗失、消除差错、提供仓储自动化水平及管理水平、提高仓库作业的灵活性；</p>
+						<p>3.降低储运损耗、有效地减少流动资金的积压、提供物流效率、提升仓库货位利用效率等诸多优点</p>
+        				<p><a class="btn">阅读更多</a></p>
+      				</div>
+      			</span>
+			</div>
+		</div>
+	</div>
+		</div>
+	</div>
+</script>
+<script type="text/x-template" id="news">
+	<div>
+		<!--新闻中心-->
+		<div class="jumbotron">
+	<div class="container">
+		<hgroup>
+			<h1>新闻中心</h1>
+			<h4 class="text-muted"><a href="index.html"> 首页 </a>/ 新闻中心</h4>
+		</hgroup>
+	</div>
+		</div>
+
+		<!--内容-->
+		<div class="tab2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col">&nbsp;</div>
+			<div class="col-md-4 col">
+				<a href="">查看全部</a>
+				<a href="">公司新闻</a>
+				<a href="">行业新闻</a>
+				<a href="">媒体报道</a>
+				<a href="">视频中心</a></div>
+			<div class="col-md-4 col">&nbsp;</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col">
+				<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#1</a></span>
+				<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#3</a></span>
+				<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#4</a></span>
+			</div>
+			<div class="col-md-4 col">
+				<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#2</a></span>
+				<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#4</a></span>
+				<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#4</a></span>
+			</div>
+			<div class="col-md-4 col">
+				<span><img src="img/banner2.jpg" alt="" class="img-responsive"><a href="">#2</a></span>
+				<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#4</a></span>
+				<span><img src="img/banner1.jpg" alt="" class="img-responsive"><a href="">#4</a></span>
+			</div>
+		</div>
+	</div>
+		</div>
+	</div>	
+</script>
+<script type="text/x-template" id="about">
+	<div>
+		<!--关于胜大-->
+		<div class="jumbotron">
+			<div class="container">
+				<hgroup>
+					<h1>关于胜大</h1>
+					<h4 class="text-muted"><a href="index.html"> 首页 </a>/ 关于胜大</h4>
+				</hgroup>
+			</div>
+		</div>
+		
+		<!--内容-->
+		<div class="tab1">
+			<div class="container">
+				<h1>胜大简介</h1>
+				<p>广东胜大科技有限公司始创于1998年，是集专业制鞋设备研发、制造、营销、服务于一体的综合型高新技术企业。秉承精益化、标准化、智能化、自动化、生态化”的经营理念，致力投入制鞋		设备产业结构技术、工序、管理升级创新的领域，匠心精神服务全球鞋业厂商！ </p>
+				<p>胜大公司始终秉承“品质服务取胜，诚信共赢做大”的经营原则。以“专业制造，用心服务”为经营理念，以“专业、诚信创新、服务”为经营宗旨，以追求成为中国鞋机行业最优秀的公司为目标		，全心全意致力于鞋机事业的发展，经过十几年的力与坚持，已发展成为行业内的佼佼者。胜大人脚踏实地，一步一个脚印迈向我们的愿景成为全球鞋业厂商制鞋整厂设备的首选供应商。</p> 
+				<p>我们的愿景 Our Vision</p>
+				<p>公司“以人为本”的人性化管理模式，吸引了大批的优秀人才加盟，打造了一支团结协作、业务精干、技术过硬的学习型队。我们一直努力学习和吸收国内外先进的制鞋技术，融合自身优势，		不断创新突破，提高自身的研发与创新能力，紧跟界鞋机发展潮流，引进意大利、德国、台湾等先进的生产设备及理念，专业为客户提供制鞋整厂创新一站式5S的经营模式=业制造+销售+零部件+		售后服务+信息反馈，让客户在售前、售中、售后中感受胜大360度全方位高标准、高品质的专业服务</p>
+				<img src="img/banner1.jpg" alt="" class="img-responsive">
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/x-template" id="contact">
+	<div>		
+	<!--联系我们-->
+		<div class="jumbotron">
+	<div class="container">
+		<hgroup>
+			<h1>联系我们</h1>
+			<h4 class="text-muted"><a href="index.html"> 首页 </a>/ 联系我们</h4>
+		</hgroup>
+	</div>
+		</div>
+		<!--内容-->
+		<div class="tab1">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-4 col">
+				<div><span class="glyphicon glyphicon-map-marker"></span><p>总部地址</p><p>广东省汕头市潮汕公路月蒲路段</p></div>
+			</div>
+			<div class="col-md-4 col">
+				<div><span class="glyphicon glyphicon-phone-alt"></span><p>联系电话</p><p>总部电话：0754-88888888</p><p>传真电话：0754-88888888</p><p>全国免费热线：400-888-8888</p></div>
+			</div>
+			<div class="col-md-4 col">
+				<div><span class="glyphicon glyphicon-envelope"></span><p>电子邮箱</p><p>251142691@qq.com</p></div>
+			</div>
+			<div class="col-md-6 col">
+				<h1>地理位置</h1>  
+					<form action=""><div id="dituContent" class="form-control"></div></form>
+			</div>
+			<div class="col-md-6 col">
+				<h1>留言反馈</h1>
+				<form action="">
+					<div class="form-group">
+						<input type="text" class="form-control" id="exampleInputEmail1"placeholder="姓名*"></div>
+						<div class="form-group">
+						<input type="email" class="form-control" id="exampleInputEmail1"placeholder="电子邮箱*"></div>
+						<div class="form-group">
+						<input type="phone" class="form-control" id="exampleInputEmail1"placeholder="电话*"></div>
+						<div class="form-group">
+						<textarea rows="10" cols="15" class="form-control" id="exampleInputEmail1" placeholder="内容*"></textarea>
+					</div>
+					<button type="submit" class="btn btn-default pull-left">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+		</div></div>
+</script>
+<script type="text/x-template" id="footer">
+	<div>
+		<!--footer-->
+		<footer id="footer" class="text-muted text-center">
+			<div class="container">
+				<div class="pull-left"><img src="img/logo2.jpg" alt="" class="img-responsive"></div>
+					<p>Copyright Right © 2019 Powered By Nick.All Rights Reserved.版权所有</p> 
+					<p>粤ICP备00000000 <a href="#">站长统计</a></p>	
+				</div>
+			<div id="gotoTop">↑</div>
+		</footer>
+	</div>
+</script>
+
+
+<script>
+	const navbar={
+		template:'#navbar'
+	}
+	const index={
+		template:'#index'
+	}
+	const products={
+		template:'#products',
+	}
+	const cases={
+		template:'#cases',
+	}
+	const news={
+		template:'#news',
+	}
+	const about={
+		template:'#about',
+	}
+	const contact={
+		template:'#contact',
+	}
+	const footer={
+		template:'#footer'
+	}				
+	routes=[
+		{path:'/',component:index},
+		{path:'/products',component:products},
+		{path:'/cases',component:cases},
+		{path:'/news',component:news},
+		{path:'/about',component:about},
+		{path:'/contact',component:contact},
+	]
+	let router=new VueRouter({
+		routes,
+	})
+	let nav={
+		template:'#navbar'
+	}
+	let footer={
+		template:'#footer'
+	}
+	new Vue({
+		el:'#sd',
+		router:router,
+		component:{
+			navbar,footer
+		}
+	})
+</script>
+
+
+
+
+
+</body>
+</html>
